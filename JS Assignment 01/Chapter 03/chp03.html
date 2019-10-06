@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <title>JS ASSIGNMENT | Chp 03. | M Ashir Ansari</title>
+    <script src="./chp03.js"></script>
+  </head>
+  <body>
+    <div id="counter"></div>
+  </body>
+
+  <!-- Q2. Declare & initialize a variable to keep track of how many times a visitor has visited a web page. Show his/her number of visits on your web page. For example: “You have visited this site N times” -->
+
+  <script>
+    var visitorCount = localStorage.getItem("on_load_counter");
+
+    if (visitorCount === null) {
+      visitorCount = 0;
+    }
+    visitorCount++;
+
+    localStorage.setItem("on_load_counter", visitorCount);
+
+    document.write("You had visited " + visitorCount);
+  </script>
+</html>
