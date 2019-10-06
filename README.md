@@ -1,4 +1,4 @@
 # JavaScript_Assignments
 PIAIC | Blockchain Quarter 2 | JavaScript Assignments.
 
-git 
+JS Assignmets "Smart Way to Learn JavaScript Book".
