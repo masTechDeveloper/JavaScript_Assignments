@@ -1,20 +1,20 @@
 // Array Example 01
 
-// var cities = [];
-// cities[0] = "Karachi";
-// cities[1] = "Multan";
-// cities[2] = "Lahor";
-// cities[3] = "Islamabad";
+var cities = [];
+cities[0] = "Karachi";
+cities[1] = "Multan";
+cities[2] = "Lahor";
+cities[3] = "Islamabad";
 
-// alert(cities);
+alert(cities);
 
-// cities.push("Rawalpindi");
+cities.push("Rawalpindi");
 
-// alert(cities);
+alert(cities);
 
-// cities.pop("Karachi");
+cities.pop("Karachi");
 
-// alert(cities);
+alert(cities);
 
 // var nameArray = [];
 
@@ -90,18 +90,18 @@
 
 // Nested for loop Example
 
-var firstName = ["Kashif", "Muzammil", "Kamran"];
-var lastName = ["Khan", "Ali", "Ayaz"];
-// example for push array
+// var firstName = ["Kashif", "Muzammil", "Kamran"];
+// var lastName = ["Khan", "Ali", "Ayaz"];
+// // example for push array
 
-firstName.push("M", "K", "H");
-lastName.push("I", "N", "V");
+// firstName.push("M", "K", "H");
+// lastName.push("I", "N", "V");
 
-for (var i = 0; i < firstName.length; i++) {
-  for (var z = 0; z < lastName.length; z++) {
-    console.log(firstName[i] + " " + lastName[z]);
-  }
-}
+// for (var i = 0; i < firstName.length; i++) {
+//   for (var z = 0; z < lastName.length; z++) {
+//     console.log(firstName[i] + " " + lastName[z]);
+//   }
+// }
 
 // Array & for loop example
 
