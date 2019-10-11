@@ -56,8 +56,29 @@
             from user - defined position / index. .Display the updated array in your
             browser. */
 
+let colorName = ["Red", "Yellow", "Blue", "Green"];
+
+document.write(colorName + "<br>");
+
+// Section A.
+var a = prompt("What color want to add a beginning!");
+
+colorName.unshift(a);
+
+document.write("Updated Array : " + colorName);
+
 /* Q4.  Write a program to initialize an array with city names.Copy 3 array elements from cities
         array to selected cities array.*/
+
+/* ---------- Solution ---------- */
+
+// let citiesList = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
+
+// document.write("<b> Cities List :</b> " + "<br>" + citiesList + "<br><br>");
+
+// selectcity = citiesList.slice(2, 4);
+
+// document.write("<b> Selected Cities List :</b> " + "<br>" + selectcity);
 
 /* Q5.  Write a JavaScript program to remove all duplicate items from an array
         Sample array: var arr1 = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
@@ -85,6 +106,20 @@
             2nd choice is Lahore
             3rd choice is Islamabad 
 */
+
+/* ---------- Solution ---------- */
+
+// let cities = ["Karachi", "Lahore", "Islamabad", "Faisalabad"];
+// let obj = ["th", "st", "nd", "rd"];
+// obj.splice(0, 1);
+
+// // Counter
+// var count = 0;
+
+// for (let s = 0; s < obj.length; s++) {
+//   count++;
+//   document.write(count + obj[s] + " choice is " + cities[s] + "<br>");
+// }
 
 /* Q7.  Write a JavaScript program to compute the union of two arrays. (Merge two
         arrays by removing all duplicates)
@@ -121,6 +156,76 @@
             e. Series: 2k, 4k, 6k, 8k, 10k, 12k, 14k, 16k, 18k, 20k
 */
 
+/* ---------- Solution 01 ---------- */
+
+// Simple Array Numbers
+
+// let count = [
+//   1,
+//   2,
+//   3,
+//   4,
+//   5,
+//   6,
+//   7,
+//   8,
+//   9,
+//   10,
+//   11,
+//   12,
+//   13,
+//   14,
+//   15,
+//   16,
+//   17,
+//   18,
+//   19,
+//   20
+// ];
+
+// document.write("Counting: " + count + "<br>");
+
+// // Array Reverse Method
+// let revArray = count.reverse();
+
+// document.write("Reverse Counting: " + revArray + "<br>");
+
+// // Let Even & Odd Numbers
+// let evenNumber = [];
+// let oddNumber = [];
+
+// for (var a = 0; a < count.length; a++) {
+//   if (a % 2 == 0) {
+//     evenNumber.push(count[a]);
+//   } else {
+//     oddNumber.push(count[a]);
+//   }
+// }
+
+// /*
+// // if you want to show reverse values so uncomment this area.
+// evenNumber.reverse();
+// oddNumber.reverse();
+// */
+
+// document.write("Even Number : " + evenNumber + "<br>");
+// document.write("Odd Number : " + oddNumber + "<br>");
+
+// //   Section E. Incomplete
+
+// // Series with K
+// evenNumber.reverse();
+
+// let series = [];
+
+// let k = "k";
+
+// for (var z = 0; z < evenNumber.length; z++) {
+//   series.concat(k);
+//   series.push(evenNumber[z], k);
+// }
+// document.write(series);
+
 /* Q9.  Write a program to identify the largest number in the given array.
         A = [24, 53, 78, 91, 12].
 */
@@ -143,11 +248,13 @@
 
 /* ---------- Solution 01 ---------- */
 
-// var arraySort = [24, 53, 98, 91, 12, 20];
+// var arraySort = [20, 53, 78, 4, 91, 12];
 
 // document.write("Array values : " + arraySort + "<br>");
 // // Array Sort Method
-// arraySort.sort();
+// arraySort.sort(function(a, b) {
+//   return a - b;
+// });
 
 // document.write("Sorted Array Values : " + arraySort);
 
