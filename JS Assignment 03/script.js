@@ -6,11 +6,13 @@
 
 /* ---------- Solution ---------- */
 
-// var eduArr = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M.Phil.", "PhD"];
+var eduArr = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M.Phil.", "PhD"];
 
-// for (var a = 0; a < eduArr.length; a++) {
-//   document.write(a + " ) " + eduArr[a] + "<br>");
-// }
+let counter = 0;
+for (var a = 0; a < eduArr.length; a++) {
+  counter++;
+  document.write(counter + " ) " + eduArr[a] + "<br>");
+}
 
 /* Q2. Write a program to store 3 student names in an array.Take another array to store
     score of these three students.Assume that total marks are 500 for each student,
@@ -18,23 +20,23 @@
 
 /* ---------- Solution ---------- */
 
-// var studentName = ["Shabir", "Arbaz", "Maaz"];
+var studentName = ["Rana Shabir", "Arbaz Riaz", "Maaz Akram"];
 
-// var marks = [320, 230, 480];
+var marks = [320, 230, 480];
 
-// for (var i = 0; i < studentName.length; i++) {
-//   var perc = (marks[i] / 500) * 100;
-//   document.write(
-//     "Marks of " +
-//       studentName[i] +
-//       " is " +
-//       marks[i] +
-//       ". Percentage: " +
-//       perc +
-//       "%" +
-//       "<br>"
-//   );
-// }
+for (var i = 0; i < studentName.length; i++) {
+  var perc = ((marks[i] / 500) * 100).toFixed(2);
+  document.write(
+    "Marks of " +
+      studentName[i] +
+      " is " +
+      marks[i] +
+      ". Percentage: " +
+      perc +
+      "%" +
+      "<br>"
+  );
+}
 
 /* Q3. Initialize an array with color names.Display the array elements in your browser.
         A.  Ask the user what color he / she wants to add to the beginning & add that
@@ -56,29 +58,61 @@
             from user - defined position / index. .Display the updated array in your
             browser. */
 
-let colorName = ["Red", "Yellow", "Blue", "Green"];
+/* ---------- Solution ---------- */
 
-document.write(colorName + "<br>");
+let colorName = ["Red", "Green", "Blue"];
+document.write("Default Array Value : " + colorName + "<br>");
 
-// Section A.
+/* ----------- Section A. ----------- */
 var a = prompt("What color want to add a beginning!");
-
 colorName.unshift(a);
+document.write("Add some to beginning Array : " + colorName + "<br>");
 
-document.write("Updated Array : " + colorName);
+/* ----------- Section B. ----------- */
+var b = prompt("What color want to add end of array!");
+colorName.push(b);
+document.write("Add some value to end of array : " + colorName + "<br>");
+
+/* ----------- Section C. ----------- */
+var c01 = prompt("Color 01. ");
+var c02 = prompt("Color 02 ");
+colorName.unshift(c01, c02);
+document.write("Add two more colors to beginning : " + colorName + "<br>");
+
+/* ----------- Section D. ----------- */
+colorName.shift();
+document.write("Delete first color in array : " + colorName + "<br>");
+
+/* ----------- Section E. ----------- */
+colorName.pop();
+document.write("Delete last color in array : " + colorName + "<br>");
+
+/* ----------- Section F. ----------- */
+let enterLocation = prompt("Enter Array Index you want to add value!");
+let enterArrayValue = prompt("Enter a color name you want to add an Array!");
+
+colorName.splice(enterLocation, 0, enterArrayValue);
+document.write("Add some values in define index range : " + colorName + "<br>");
+
+/* ----------- Section G. ----------- */
+let inpIndex = prompt("Please enter a index");
+let inpRange = prompt("Please enter a range you want to remove");
+
+colorName.splice(inpIndex, inpRange);
+document.write("Delete some values in define range : " + colorName + "<br>");
 
 /* Q4.  Write a program to initialize an array with city names.Copy 3 array elements from cities
         array to selected cities array.*/
 
 /* ---------- Solution ---------- */
 
-// let citiesList = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
+let citiesList = ["Karachi", "Lahore", "Islamabad", "Quetta", "Peshawar"];
 
-// document.write("<b> Cities List :</b> " + "<br>" + citiesList + "<br><br>");
+document.write("<b> Cities List :</b> " + "<br>" + citiesList + "<br><br>");
 
-// selectcity = citiesList.slice(2, 4);
+selectcity = citiesList.slice(2, 4);
 
-// document.write("<b> Selected Cities List :</b> " + "<br>" + selectcity);
+document.write("<b> Selected Cities List :</b> " + "<br>" + selectcity);
 
 /* Q5.  Write a JavaScript program to remove all duplicate items from an array
         Sample array: var arr1 = [3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
@@ -86,17 +120,17 @@ document.write("Updated Array : " + colorName);
 
 /* ---------- Solution ---------- */
 
-// let array = [3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3];
+let array = [3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3];
 
-// document.write("Array Value : " + array + "<br>");
+document.write("Array Value : " + array + "<br>");
 
-// let unique = [...new Set(array)];
+let unique = [...new Set(array)];
 
-// document.write("Remove all Duplicates : " + unique + "<br>");
+document.write("Remove all Duplicates : " + unique + "<br>");
 
-// unique.sort();
+unique.sort();
 
-// document.write("Value Sorted : " + unique);
+document.write("Value Sorted : " + unique);
 
 /* Q6.  We have the following arrays:
             var aCities = ["Karachi", "Lahore", "Islamabad", "Faisalabad"];
@@ -109,17 +143,17 @@ document.write("Updated Array : " + colorName);
 
 /* ---------- Solution ---------- */
 
-// let cities = ["Karachi", "Lahore", "Islamabad", "Faisalabad"];
-// let obj = ["th", "st", "nd", "rd"];
-// obj.splice(0, 1);
+let cities = ["Karachi", "Lahore", "Islamabad", "Faisalabad"];
+let obj = ["th", "st", "nd", "rd"];
+obj.splice(0, 1);
 
-// // Counter
-// var count = 0;
+// Counter
+var count = 0;
 
-// for (let s = 0; s < obj.length; s++) {
-//   count++;
-//   document.write(count + obj[s] + " choice is " + cities[s] + "<br>");
-// }
+for (let s = 0; s < obj.length; s++) {
+  count++;
+  document.write(count + obj[s] + " choice is " + cities[s] + "<br>");
+}
 
 /* Q7.  Write a JavaScript program to compute the union of two arrays. (Merge two
         arrays by removing all duplicates)
@@ -131,22 +165,27 @@ document.write("Updated Array : " + colorName);
 
 /* ---------- Solution ---------- */
 
-// var a = [10, 20, 4, 40, 60, 70];
+var a = [10, 20, 4, 40, 60, 70];
 
-// var b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var b = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-// document.write("1st Array Value : " + a + "<br><br>");
-// document.write("2st Array Value : " + b + "<br><br>");
+document.write("1st Array Value : " + a + "<br><br>");
+document.write("2st Array Value : " + b + "<br><br>");
 
-// // Merge Two arrays
-// var concatArray = a.concat(b);
+// Merge Two arrays
+var concatArray = a.concat(b);
 
-// document.write("Merge 'A' & 'B' Array : " + concatArray + "<br><br>");
+document.write("Merge 'A' & 'B' Array : " + concatArray + "<br><br>");
 
-// // Remove duplicate values
-// const unique = [...new Set(concatArray)];
+// Remove duplicate values
+const unique = [...new Set(concatArray)];
 
-// document.write("Remove All Duplicate Values  : " + unique + "<br><br>");
+// Sort Array
+unique.sort(function(a, b) {
+  return a - b;
+});
+
+document.write("Remove All Duplicate Values : " + unique + "<br><br>");
 
 /* Q8.  Generate the following series in your browser. See example output.
             a. Counting: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15
@@ -158,73 +197,65 @@ document.write("Updated Array : " + colorName);
 
 /* ---------- Solution 01 ---------- */
 
-// Simple Array Numbers
+/* Simple Array Numbers */
 
-// let count = [
-//   1,
-//   2,
-//   3,
-//   4,
-//   5,
-//   6,
-//   7,
-//   8,
-//   9,
-//   10,
-//   11,
-//   12,
-//   13,
-//   14,
-//   15,
-//   16,
-//   17,
-//   18,
-//   19,
-//   20
-// ];
+let count = [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20
+];
 
-// document.write("Counting: " + count + "<br>");
+document.write("Counting: " + count + "<br>");
 
-// // Array Reverse Method
-// let revArray = count.reverse();
+/* Array Reverse Method */
+let revArray = count.reverse();
 
-// document.write("Reverse Counting: " + revArray + "<br>");
+document.write("Reverse Counting: " + revArray + "<br>");
 
-// // Let Even & Odd Numbers
-// let evenNumber = [];
-// let oddNumber = [];
+/* Let Even & Odd Numbers */
+let evenNumber = [];
+let oddNumber = [];
 
-// for (var a = 0; a < count.length; a++) {
-//   if (a % 2 == 0) {
-//     evenNumber.push(count[a]);
-//   } else {
-//     oddNumber.push(count[a]);
-//   }
-// }
+for (var a = 0; a < count.length; a++) {
+  if (a % 2 == 0) {
+    evenNumber.push(count[a]);
+  } else {
+    oddNumber.push(count[a]);
+  }
+}
 
-// /*
-// // if you want to show reverse values so uncomment this area.
-// evenNumber.reverse();
-// oddNumber.reverse();
-// */
+/*
+// if you want to show reverse values so uncomment this area.
+evenNumber.reverse();
+oddNumber.reverse();
+*/
 
-// document.write("Even Number : " + evenNumber + "<br>");
-// document.write("Odd Number : " + oddNumber + "<br>");
+document.write("Even Number : " + evenNumber + "<br>");
+document.write("Odd Number : " + oddNumber + "<br>");
 
-// //   Section E. Incomplete
-
-// // Series with K
-// evenNumber.reverse();
-
-// let series = [];
-
-// let k = "k";
-
-// for (var z = 0; z < evenNumber.length; z++) {
-//   series.concat(k);
-//   series.push(evenNumber[z], k);
-// }
-// document.write(series);
+/* Series with K */
+evenNumber.reverse();
+document.write("Series : ");
+for (var z = 0; z < evenNumber.length; z++) {
+  document.write(evenNumber[z] + "k,");
+}
 
 /* Q9.  Write a program to identify the largest number in the given array.
         A = [24, 53, 78, 91, 12].
@@ -232,15 +263,15 @@ document.write("Updated Array : " + colorName);
 
 /* ---------- Solution 01 ---------- */
 
-// var findlargeNumber = [24, 53, 98, 91, 12, 20];
+var findlargeNumber = [24, 53, 98, 91, 12, 20];
 
-// if (findlargeNumber[0] > 0) {
-//   document.write("Array Items: " + findlargeNumber + "<br>");
-//   let num = Math.max(...findlargeNumber);
-//   document.write("The larger number is : " + num);
-// } else {
-//   document.write("Error!");
-// }
+if (findlargeNumber[0] > 0) {
+  document.write("Array Items: " + findlargeNumber + "<br>");
+  let num = Math.max(...findlargeNumber);
+  document.write("The larger number is : " + num);
+} else {
+  console.log("Error!");
+}
 
 /* Q10. Sort an array from smallest to largest value
             A = [20,53,78,4,91,12]
@@ -248,30 +279,12 @@ document.write("Updated Array : " + colorName);
 
 /* ---------- Solution 01 ---------- */
 
-// var arraySort = [20, 53, 78, 4, 91, 12];
+var arraySort = [20, 53, 78, 4, 91, 12];
 
-// document.write("Array values : " + arraySort + "<br>");
-// // Array Sort Method
-// arraySort.sort(function(a, b) {
-//   return a - b;
-// });
+document.write("Array values : " + arraySort + "<br>");
+// Array Sort Method
+arraySort.sort(function(a, b) {
+  return a - b;
+});
 
-// document.write("Sorted Array Values : " + arraySort);
-
-/* ---------- Solution 02 | Incomplete ---------- */
-/*
-var findlargeNumber = [24, 53, 98, 91, 12, 20];
-
-var sortedArray = [];
-
-for (var i = 0; i < findlargeNumber.length; i++) {
-  if (findlargeNumber[0] > 0) {
-    let num = Math.max(...findlargeNumber);
-    sortedArray.push(num);
-    findlargeNumber.pop(num);
-  } else {
-    document.write("Error!");
-  }
-}
-document.write(sortedArray);
-*/
+document.write("Sorted Array Values : " + arraySort);
