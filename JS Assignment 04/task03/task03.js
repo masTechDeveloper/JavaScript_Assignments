@@ -26,7 +26,7 @@ function CheckPas() {
 
 
 
-/* ------ Solution 02 ---- */
+/* ------ Solution 02 work in process ---- */
 
 // var myInput = document.getElementById("psw");
 // var letter = document.getElementById("letter");
