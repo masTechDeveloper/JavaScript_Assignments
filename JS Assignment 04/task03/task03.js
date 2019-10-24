@@ -12,7 +12,7 @@ function CheckPas() {
 
     var passInput = document.getElementById("inputPass").value;
 
-    var passw = /^[A-Za-z]\w{7,14}$/;
+    var passw = /^[A-Za-z0-9]\w{7,14}$/;
 
     if (passInput.match(passw)) {
         alert("Correct Password, try another...");
