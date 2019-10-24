@@ -1,4 +1,4 @@
-/* -----------------------  JavaScript Assignment 04 | Task 09 ----------------------- */
+/* -----------------------  JavaScript Assignment 04 | Task 10 ----------------------- */
 
 
 /*  10. Write a program that round a number to a given decimal places. */
