@@ -6,26 +6,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PIAIC | JavaScript Assignment 04 | Task 04.</title>
-    <link rel="stylesheet" type="text/css" href="./task03.css" />
+
+    <style>
+        li {
+            list-style-type: none;
+            font-size: 16pt;
+        }
+        
+        .mail {
+            margin: auto;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            width: 400px;
+            background: #D8F1F8;
+            border: 1px soild silver;
+        }
+        
+        .mail h2 {
+            margin-left: 38px;
+        }
+        
+        input {
+            font-size: 20pt;
+        }
+        
+        input:focus,
+        textarea:focus {
+            background-color: lightyellow;
+        }
+        
+        input submit {
+            font-size: 12pt;
+        }
+        
+        .rq {
+            color: #FF0000;
+            font-size: 10pt;
+        }
+    </style>
 
     <script src="./task04.js"></script>
 </head>
 
-<body>
 
-    <!-- <div class="container">
-        <h1>Password Validation</h1>
-        <ol>
-            <li>It should contain alphabets and numbers</li>
-            <li>It should not start with a number</li>
-            <li>It must at least 8 characters long</li>
-        </ol>
 
-        <input type="text" id="inputPass" placeholder="Enter Password!">
-        <button type="submit" onclick="CheckPas()" value="Submit">Check Password</button>
-        <br> <br> <br>
-        <span id="result" class="reslt"></span>
-    </div> -->
+<body onload='document.form1.text1.focus()'>
+    <div class="mail">
+        <h2>Input an email and Submit</h2>
+        <form name="form1" action="#">
+            <ul>
+                <li><input type='text' name='text1' /></li>
+                <li>&nbsp;</li>
+                <li class="submit">
+                    <input type="submit" value="Submit" onclick="ValidateEmail(document.form1.text1)" />
+                </li>
+                <li>&nbsp;</li>
+            </ul>
+        </form>
+    </div>
+
 </body>
 
 </html>
