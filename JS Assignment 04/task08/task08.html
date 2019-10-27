@@ -6,15 +6,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>PIAIC | JavaScript Assignment 04 | Task 08.</title>
+    <style>
+        .container {
+            text-align: center;
+            background-color: antiquewhite;
+            padding: 10px;
+            border-radius: 20px;
+        }
+        
+        input {
+            width: 300px;
+            padding: 12px 12px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        h1 {
+            font-family: arial;
+            color: #ffffff;
+            background-color: red;
+            padding: 10px;
+            margin: 30px 10px 10px;
+            border-radius: 20px;
+        }
+        
+        span {
+            font-family: 'Courier New', Courier, monospace;
+            color: red;
+        }
+    </style>
 
-    <script src="./task08.js"></script>
 </head>
 
 <body>
+    <div class="container">
+        <h1>Numbers to Words Converter</h1>
 
+        <h2>Convert this Number</h2>
+        <input id="number" type="text" />
 
-    <span id="words"></span>
-    <input id="number" type="text" />
+        <h2>Answer: <br><br><span id="words"></span></h2>
+
+    </div>
 </body>
+<!-- Link js file -->
+<script src="./task08.js"></script>
 
 </html>
