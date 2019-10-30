@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="./test.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <h2>JavaScript Functions</h2>
+
+    <input type="text" id="val1"> <br><br>
+    <input type="text" id="val2"><br><br>
+    <input type="text" name="opr" id="opt">
+    <button type="button" id="sub" onclick="myFunction()"> submit</button>
+
+    <p id="demo"></p>
+
+    <script>
+        function myFunction(p1, p2, p3) {
+            if (p3 == "ad") {
+                return (p1 + p2);
+            } else {
+
+            }
+        }
+        var val01 = document.getElementById("val1").value;
+        var val02 = document.getElementById("val2").value;
+        var opt = document.getElementById("opt").value;
+        document.getElementById("demo").innerHTML = myFunction(val01, val02, opt);
+    </script>
+
+</body>
+
+</html>
