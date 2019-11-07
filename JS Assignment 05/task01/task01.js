@@ -8,7 +8,6 @@ function factorial(num) {
         return 1;
     }
     return num * factorial(num - 1);
-
 }
 
 alert("You are enter " + val + " & Factorial Number is " + factorial(val));
