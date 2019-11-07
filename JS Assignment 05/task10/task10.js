@@ -2,7 +2,7 @@
         of vowel used within the string. 
 */
 
-/* Note: Please run one solutioin at a time.*/
+/* Note: Please run one solution at a time.*/
 
 var input = prompt("Find Vowels in String!").toString().toUpperCase();
 
