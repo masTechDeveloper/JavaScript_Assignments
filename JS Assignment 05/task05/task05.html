@@ -14,3 +14,39 @@
 </body>
 
 </html>
+
+
+
+<!-- 
+import java.io.*;
+import java.util.Scanner;
+class Denominations
+{
+   public static void main(String args[])throws IOException
+   {
+       Scanner sc =  new Scanner(System.in);
+       int denNotes[] = {1000,500,100,50,20,10,5,2,1}; // Storing all the denominations
+   
+       int amount=sc.nextInt();
+       int tempAmount=amount;
+       int totalNotes=0,count=0;
+
+       System.out.println("\nDENOMINATIONS: \n");
+
+       for(int i=0;i<denNotes.length;i++)
+       {
+           count=amount/denNotes[i]; // Counting number of denomination notes
+           if(count!=0) //Print the denomination if the count is not zero
+           {
+               System.out.println(denNotes[i]+"\tx\t"+count+"\t= "+denNotes[i]*count);
+           }
+           totalNotes=totalNotes+count; //Find total number of notes
+           amount=amount%denNotes[i]; //Find the remaining amount whose denomination is to be found
+       }
+
+       System.out.println("--------------------------------");
+       System.out.println("TOTAL\t\t\t= "+tempAmount);
+       System.out.println("--------------------------------");
+       System.out.println("Total Number of Notes\t= "+totalNotes);
+   }
+} -->
